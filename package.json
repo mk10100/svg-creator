@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Mohamed Khalil",
   "license": "ISC",
@@ -12,5 +12,8 @@
   "dependencies": {
     "inquirer": "^9.2.11",
     "svg.js": "^2.7.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

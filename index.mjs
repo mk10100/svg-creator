@@ -66,7 +66,7 @@ async function promptUserForInput() {
       process.exit(1);
   }
 
-  const svgContent = shape.toSVG();
+  const svgContent = shape.render();
   writeToFile(`./examples/logo.svg`, svgContent);
   console.log("Generated logo.svg");
 }
