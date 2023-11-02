@@ -22,7 +22,14 @@ const shapeQuestions = [
   {
     type: "input",
     name: "text",
-    message: "Enter text:",
+    message: "Enter text (up to 3 characters):",
+    validate: (input) => {
+      if (input.length <= 3) {
+        return true;
+      } else {
+        return "Please enter up to 3 characters.";
+      }
+    },
   },
 ];
 
@@ -60,7 +67,8 @@ async function promptUserForInput() {
   }
 
   const svgContent = shape.toSVG();
-  writeToFile(`./examples/${text}.svg`, svgContent);
+  writeToFile(`./examples/logo.svg`, svgContent);
+  console.log("Generated logo.svg");
 }
 
 promptUserForInput();
